@@ -206,44 +206,11 @@
             <div class="hero-card fade-in-right" aria-label="Quick quote form">
               <h2 class="quick-quote-title">Get Your Free Quote</h2>
               <p class="quick-quote-sub">Response within 1 hour · Mon–Sat 7AM–5PM CST</p>
-              <form id="hero-quote-form" novalidate aria-label="Quick quote request form">
-                <div class="form-row">
-                  <div class="form-group">
-                    <label class="form-label" for="hero-name">Your Name *</label>
-                    <input type="text" id="hero-name" name="name" class="form-input" placeholder="Full Name" required autocomplete="name" />
-                  </div>
-                  <div class="form-group">
-                    <label class="form-label" for="hero-phone">Phone *</label>
-                    <input type="tel" id="hero-phone" name="phone" class="form-input" placeholder="(713) 000-0000" required autocomplete="tel" />
-                  </div>
-                </div>
-                <div class="form-row">
-                  <div class="form-group">
-                    <label class="form-label" for="hero-pickup">Pickup City, State *</label>
-                    <input type="text" id="hero-pickup" name="pickup" class="form-input" placeholder="Houston, TX" required />
-                  </div>
-                  <div class="form-group">
-                    <label class="form-label" for="hero-delivery">Delivery City, State *</label>
-                    <input type="text" id="hero-delivery" name="delivery" class="form-input" placeholder="Dallas, TX" required />
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="form-label" for="hero-service">Service Needed *</label>
-                  <select id="hero-service" name="service" class="form-select" required>
-                    <option value="" disabled selected>Select a Service</option>
-                    <option value="long-distance">Long Distance Transport</option>
-                    <option value="local">Local Transport (Houston Area)</option>
-                    <option value="flight-nanny">Flight Nanny / Flight Transport</option>
-                    <option value="consultation">Book a Consultation</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label class="form-label" for="hero-pet">Pet Type &amp; Breed</label>
-                  <input type="text" id="hero-pet" name="pet" class="form-input" placeholder="e.g. Golden Retriever, 2 years old" autocomplete="off" />
-                </div>
-                <button type="submit" class="btn btn-primary form-submit">🐾 Request My Free Quote</button>
+              <div class="chat-cta-block" style="text-align:center;padding:16px 0;">
+                <p style="margin-bottom:14px;font-size:1rem;color:var(--text-secondary);">Click below to get your free quote — we respond within 1 hour.</p>
+                <button onclick="document.querySelector('.hl-chat-widget button, [data-widget-id]')?.click()" class="btn btn-primary form-submit" style="cursor:pointer;">🐾 Get My Free Quote</button>
                 <p class="card-guarantee"><span>🔒 100% Private &amp; Secure</span> · No spam, ever.</p>
-              </form>
+              </div>
             </div>
           </div>
         </div>
@@ -536,47 +503,12 @@
               </div>
             </div>
             <div class="main-form">
-              <form id="main-quote-form" novalidate aria-label="Full pet transport quote request">
-                <div class="form-section-title">Your Information</div>
-                <div class="form-row">
-                  <div class="form-group"><label class="form-label" for="full-name">Full Name *</label><input type="text" id="full-name" name="full_name" class="form-input" placeholder="Jane Smith" required autocomplete="name" /></div>
-                  <div class="form-group"><label class="form-label" for="phone-number">Phone Number *</label><input type="tel" id="phone-number" name="phone" class="form-input" placeholder="(713) 000-0000" required autocomplete="tel" /></div>
-                </div>
-                <div class="form-row">
-                  <div class="form-group"><label class="form-label" for="email-address">Email Address *</label><input type="email" id="email-address" name="email" class="form-input" placeholder="jane@email.com" required autocomplete="email" /></div>
-                  <div class="form-group"><label class="form-label" for="contact-method">Preferred Contact *</label><select id="contact-method" name="contact_method" class="form-select" required><option value="" disabled selected>Select Method</option><option value="phone-call">Phone Call</option><option value="text-sms">Text / SMS</option><option value="email">Email</option></select></div>
-                </div>
-                <div class="form-section-title">Transport Details</div>
-                <div class="form-row">
-                  <div class="form-group"><label class="form-label" for="pickup-location">Pickup City &amp; State *</label><input type="text" id="pickup-location" name="pickup" class="form-input" placeholder="Houston, TX" required /></div>
-                  <div class="form-group"><label class="form-label" for="delivery-location">Delivery City &amp; State *</label><input type="text" id="delivery-location" name="delivery" class="form-input" placeholder="Chicago, IL" required /></div>
-                </div>
-                <div class="form-row">
-                  <div class="form-group"><label class="form-label" for="service-type">Service Type *</label><select id="service-type" name="service_type" class="form-select" required><option value="" disabled selected>Select Service</option><option value="long-distance">Long Distance Transport</option><option value="local">Local Transport (Houston Area)</option><option value="flight-nanny">Flight Nanny / Flight Transport</option></select></div>
-                  <div class="form-group"><label class="form-label" for="urgency">Urgency Level</label><select id="urgency" name="urgency" class="form-select"><option value="" disabled selected>Select Urgency</option><option value="asap">ASAP / Emergency</option><option value="within-week">Within This Week</option><option value="within-month">Within This Month</option><option value="planning">Just Planning Ahead</option></select></div>
-                </div>
-                <div class="form-group"><label class="form-label" for="travel-timeframe">Requested Travel Timeframe</label><input type="text" id="travel-timeframe" name="timeframe" class="form-input" placeholder="e.g. July 15-20, 2026 / ASAP / Flexible" /></div>
-                <div class="form-section-title">Pet Information</div>
-                <div class="form-row">
-                  <div class="form-group"><label class="form-label" for="pet-type">Pet Type *</label><select id="pet-type" name="pet_type" class="form-select" required><option value="" disabled selected>Select Pet Type</option><option value="dog">Dog</option><option value="cat">Cat</option><option value="multiple-dogs">Multiple Dogs</option><option value="dog-and-cat">Dog &amp; Cat</option><option value="other">Other</option></select></div>
-                  <div class="form-group"><label class="form-label" for="num-pets">Number of Pets *</label><select id="num-pets" name="num_pets" class="form-select" required><option value="" disabled selected>Select Number</option><option value="1">1 Pet</option><option value="2">2 Pets</option><option value="3">3 Pets</option><option value="4+">4+ Pets</option></select></div>
-                </div>
-                <div class="form-row">
-                  <div class="form-group"><label class="form-label" for="breed">Breed</label><input type="text" id="breed" name="breed" class="form-input" placeholder="e.g. Golden Retriever" /></div>
-                  <div class="form-group"><label class="form-label" for="pet-age">Pet Age</label><input type="text" id="pet-age" name="pet_age" class="form-input" placeholder="e.g. 3 years, 8 weeks" /></div>
-                </div>
-                <div class="form-section-title">About Your Pet</div>
-                <div class="checkbox-group" role="group" aria-label="Pet qualification questions">
-                  <label class="checkbox-item"><input type="checkbox" name="traveled_before" value="yes" /><label>Has your pet traveled before?</label></label>
-                  <label class="checkbox-item"><input type="checkbox" name="requires_medication" value="yes" /><label>Does your pet require medication?</label></label>
-                  <label class="checkbox-item"><input type="checkbox" name="crate_trained" value="yes" /><label>Is your pet crate trained?</label></label>
-                  <label class="checkbox-item"><input type="checkbox" name="special_needs" value="yes" /><label>Does your pet have special needs?</label></label>
-                  <label class="checkbox-item"><input type="checkbox" name="vaccinations_current" value="yes" /><label>Are vaccinations current?</label></label>
-                </div>
-                <div class="form-group mt-24"><label class="form-label" for="special-care">Special Care Requirements / Additional Notes</label><textarea id="special-care" name="special_care" class="form-textarea form-input" placeholder="Please share anything important about your pet — temperament, medical conditions, dietary needs, anxiety, medications, or any other details..." rows="4"></textarea></div>
-                <button type="submit" class="btn btn-primary btn-lg form-submit">🐾 Submit My Quote Request</button>
-                <p class="form-disclaimer">By submitting this form, you agree to be contacted by Family First Pet Drivers. We respect your privacy and will never share your information. · Mon–Sat 7AM–5PM CST</p>
-              </form>
+              <div class="chat-cta-block" style="text-align:center;padding:32px 24px;background:var(--surface,#fff);border-radius:12px;box-shadow:0 2px 16px rgba(0,0,0,0.08);">
+                <h3 style="margin-bottom:10px;font-size:1.4rem;">Ready to Book Your Pet's Transport?</h3>
+                <p style="margin-bottom:20px;color:var(--text-secondary);font-size:1rem;">Chat with us directly — we'll gather everything we need and build a custom quote for you.</p>
+                <button onclick="document.querySelector('.hl-chat-widget button, [data-widget-id]')?.click()" class="btn btn-primary btn-lg" style="cursor:pointer;">🐾 Start My Quote in Chat</button>
+                <p class="form-disclaimer" style="margin-top:16px;">Mon–Sat 7AM–5PM CST · We respect your privacy and will never share your information.</p>
+              </div>
             </div>
           </div>
         </div>
